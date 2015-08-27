@@ -1,7 +1,7 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
+## This function stores/caches an input parameter matrix.
 makeCacheMatrix <- function(m, ...) {
     ms <- NULL
     set <- function(y) {
@@ -15,6 +15,7 @@ makeCacheMatrix <- function(m, ...) {
          get = get,
          setinverse = setinverse,
          getinverse = getinverse)
+    ## Here is some code to try it:
     ## r1 <- c(0,1,4)
     ## r2 <- c(5,6,0)
     ## r3 <- c(3,2,5)
@@ -25,7 +26,8 @@ makeCacheMatrix <- function(m, ...) {
 }
 
 
-## Write a short comment describing this function
+## This function is computes the inverse of an input matrix and stores it using makeChacheMatrix function. 
+## If it is already stored, it gives back the stored data and do not computes the inverse again.
 cacheSolve <- function(x,...) {
     mi <- x$getinverse()
     if(!is.null(mi)) {
